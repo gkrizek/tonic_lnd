@@ -200,6 +200,7 @@ pub async fn connect_string(
     lnd_tls_cert_contents: Vec<u8>,
     macaroon: String,
 ) -> Result<LndClient, Box<dyn std::error::Error>> {
+    openssl_probe::init_ssl_cert_env_vars();
     let lnd_address = format!("https://{}:{}", lnd_host, lnd_port).to_string();
 
     let uri = lnd_address.parse::<Uri>().unwrap();

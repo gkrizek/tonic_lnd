@@ -23,6 +23,7 @@ prost = "0.10"
 tokio = { version = "1", features = ["full"] }
 tokio-stream = { version = "0.1", features = ["net"] }
 openssl = "0.10"
+openssl-probe = "0.1.2"
 tower = "0.4"
 pretty_env_logger = "*"
 hex = "0.4.3"
